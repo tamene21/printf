@@ -14,18 +14,18 @@ int (*search_function(const char *format))(va_list)
 	unsigned int i = 0;
 
 	print_f find_f[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"i", print_int},
-		{"d", print_dec},
-		{"r", print_rev},
-		{"b", print_bin},
-		{"u", print_unsig},
-		{"o", print_octal},
+		{"c", print_c},
+		{"s", print_s},
+		{"i", print_i},
+		{"d", print_d},
+		{"r", print_r},
+		{"b", print_b},
+		{"u", print_u},
+		{"o", print_o},
 		{"x", print_x},
 		{"X", print_X},
-		{"R", print_rot13},
-		{"%", print_pholder}
+		{"R", print_R},
+		{"%", print_P}
 		{NULL, NULL}
 
 	};
