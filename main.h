@@ -1,7 +1,21 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
 
 #include <stdarg.h>
+
+/**
+ *struct print - structure for printing various types
+ *@t: type to print
+ *@f: function to print
+ */
+
+typedef struct print
+{
+	char *t;
+	int (*f)(va_list);
+} print_t;
+
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -14,25 +28,10 @@ int print_b(va_list b);
 int print_o(va_list o);
 int print_x(va_list x);
 int print_X(va_list X);
+int print_p(va_list p);
+int print_S(va_list S);
 int print_r(va_list r);
 int print_R(va_list R);
-int print_P(va_list P);
 
 
-/**
- *struct print_format - Struct for printing various format
- *@sp: The specifiers
- *@f: The function associated
- */
-
-typedef struct print_format
-
-{
-
-	char *sp;
-
-	int (*f)(va_list);
-
-} print_f;
-
-#endif /*MAIN_H*/
+#endif  /* _MAIN_H */
